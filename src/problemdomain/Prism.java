@@ -2,24 +2,14 @@ package problemdomain;
 
 public class Prism extends Shape
 {
-
-	private final String SQUARE_PRISM = "SquarePrism";
-	private final String TRIANGULAR_PRISM = "TriangularPrism";
-	private final String PENTAGONAL_PRISM = "PentagonalPrism";
-	private final String OCTAGONAL_PRISM = "OctagonalPrism";
-	
-	
-	private String basePolygon;
 	private double edgeLength;
-	
-	
-	
+		
+	//SquarePrism, TrianglarPrism, PentagonalPrism, OctagonalPrism
 	
 	public Prism()
 	{
 		// TODO Auto-generated constructor stub
 	}
-
 	
 	
 	@Override
@@ -30,22 +20,6 @@ public class Prism extends Shape
 	}
 
 
-
-	/**
-	 * @return the basePolygon
-	 */
-	public String getBasePolygon()
-	{
-		return basePolygon;
-	}
-
-	/**
-	 * @param basePolygon the basePolygon to set
-	 */
-	public void setBasePolygon(String basePolygon)
-	{
-		this.basePolygon = basePolygon;
-	}
 
 	/**
 	 * @return the edgeLength
