@@ -38,7 +38,7 @@ public class Pyramid extends Shape
 	}
 
 	@Override
-	public void calculateArea()
+	public void calculateBaseArea()
 	{
 		// TODO Auto-generated method stub
 		

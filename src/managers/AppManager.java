@@ -2,7 +2,7 @@ package managers;
 
 import exceptions.InvalidArgumentException;
 
-public class SortManager
+public class AppManager
 {
 	private final String SORT = "-s";
 	private final String COMPARE = "-t";
@@ -12,7 +12,7 @@ public class SortManager
 	private String compareType = "";
 	private String filename = "";
 
-	public SortManager(String args[])
+	public AppManager(String args[])
 	{
 		try
 		{
@@ -102,8 +102,10 @@ public class SortManager
 			return "Filename";
 		case SORT:
 			return "Sort type";
-		default:
+		case COMPARE:
 			return "Compare type";
+		default:
+			return "";
 		}
 	}
 
