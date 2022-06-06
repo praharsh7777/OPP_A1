@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.Collections;
 
 import managers.AppManager;
+import managers.BaseAreaCompare;
+import managers.HeapSort;
 import problemdomain.Cylinder;
 import problemdomain.Shape;
 
@@ -20,26 +22,31 @@ public class AppDriver
 		
 		//String a[] = {"-fpolyfor1.txt", "-tv", "-sb"};
 		//new SortManager(a);
-
+		
 		
 		Cylinder[] list =new Cylinder[6];
+
+		list[0]= new Cylinder(6,10.25);
+		list[1]= new Cylinder(4,21.25);
+		list[2]= new Cylinder(2,54.25);
+		list[3]= new Cylinder(3,30.25);
+		list[4]= new Cylinder(1,20.25);
+		list[5]= new Cylinder(5,4.25);
 		
-		//TEST CALCULATION
-		list[0]= new Cylinder(3,10.25);
-		list[1]= new Cylinder(1,20.25);
-		list[2]= new Cylinder(2,20.25);
-		list[3]= new Cylinder(3,20.25);
-		list[4]= new Cylinder(4,20.25);
-		list[5]= new Cylinder(5,20.25);
-		
-		
-		Arrays.sort(list);
-		
-		for (Cylinder cylinder : list)
+		for( Cylinder s : list ) 
 		{
-			System.out.println(cylinder.toString());			
+			System.out.println("\t" + s.getHeight() + " " + s.getBaseArea()); 
 		}
 		
+		System.out.println("HEAP SORT: ");
+		BaseAreaCompare ba = new BaseAreaCompare();
+		//Arrays.sort(list, gc);
+		HeapSort.sort(list, ba);
+		
+		for( Cylinder s : list ) 
+		{
+			System.out.println("\t" + s.getHeight() + " " + s.getBaseArea()); 
+		}
 		
 	}	
 }
