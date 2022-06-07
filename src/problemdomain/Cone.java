@@ -9,8 +9,17 @@ public class Cone extends Shape
 	public Cone()
 	{
 		// TODO Auto-generated constructor stub
+		
 	}
 
+	public cone(double height, double radius)
+	{
+		this.setHeight(height);
+		this.radius = radius;
+		
+		this.calculateBaseArea();
+		this.calculateVolume();
+	}
 	
 	public double getRadius()
 	{
@@ -34,21 +43,31 @@ public class Cone extends Shape
 
 
 	@Override
-	public void calculateBaseArea()
-	{
-		// TODO Auto-generated method stub
+	
+		public void calculateBaseArea()
+		{	
+			this.setBaseArea(Math.PI * (this.getRadius() * this.getRadius()));
+		}
 		
-	}
+	
 
 	@Override
 	public void calculateVolume()
 	{
-		// TODO Auto-generated method stub
-		
+		this.setVolume (this.getBaseArea()*this.getHeight()/3);
 	}
 
-
-
+	public int compareTo(Shape shape)
+	{		
+		return super.compareTo(shape);	
+	
+	}
 	
 
+	public String toString() {
+		return String.format("cone radius: %-8.2f %s", this.getRadius(), super.toString());
+	}
+	
 }
+}
+
