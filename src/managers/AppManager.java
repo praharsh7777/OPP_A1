@@ -4,7 +4,6 @@ import java.awt.font.ShapeGraphicAttribute;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.Method;
-import java.util.Iterator;
 import java.util.Scanner;
 
 import exceptions.InvalidArgumentException;
@@ -36,7 +35,6 @@ public class AppManager
 
 	public AppManager(String args[])
 	{
-
 		try
 		{
 			for (String arg : args)
@@ -80,12 +78,7 @@ public class AppManager
 			return;
 		}
 
-		// Do Sorting
 
-		// test
-		System.out.println("File name :" + this.filename);
-		System.out.println("Sort type :" + this.sortType);
-		System.out.println("Compare type :" + this.compareType);
 	}
 
 	private String getAttribute(String arg)

@@ -20,21 +20,21 @@ public class AppDriver
 
 	public static void main(String args[]) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		//System.out.println(args[0]);
-		
-		//String a[] = {"-fpolyfor1.txt", "-tv", "-sb"};
-		//new SortManager(a);
+		String path = "-fC:\\Users\\barab\\Desktop\\School Files\\SPRING 2022\\311 Advance OOP\\Assignments\\A1 Complexity and Sorting\\1\\Data_Files_ClassName (1)\\polyfor1.txt";
+		String a[] = {path, "-tv", "-sb"};
+		new AppManager(a);
 
 		
-		AppManager app = new AppManager();
+		//AppManager app = new AppManager();
 		
 		
-		try
-		{
-			app.loadDataFiles("C:\\Users\\barab\\Desktop\\School Files\\SPRING 2022\\311 Advance OOP\\Assignments\\A1 Complexity and Sorting\\1\\Data_Files_ClassName (1)\\polyfor1.txt");
-		} catch (FileNotFoundException e)
-		{
-			System.out.println(e.getMessage());
-		}
+//		try
+//		{
+//			app.loadDataFiles("C:\\Users\\barab\\Desktop\\School Files\\SPRING 2022\\311 Advance OOP\\Assignments\\A1 Complexity and Sorting\\1\\Data_Files_ClassName (1)\\polyfor1.txt");
+//		} catch (FileNotFoundException e)
+//		{
+//			System.out.println(e.getMessage());
+//		}
 		
 	}	
 	
